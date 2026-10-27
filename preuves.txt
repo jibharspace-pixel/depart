@@ -1,0 +1,10 @@
+J06 — Preuve d’exécution
+
+Commande réellement lancée dans Windows PowerShell :
+node .\depenses.js
+
+Sortie obtenue après avoir terminé le programme :
+[Collez ici le rapport complet, y compris le tableau avant et après le tri.]
+
+Archive à remettre : J06_Nom_Prenom.zip
+Contenu attendu : depenses.js et preuves.txt
