@@ -25,7 +25,8 @@ function calculerTotal(depenses) {
 
 // TODO 2 : retourner la moyenne par jour ; 0 si le tableau est vide.
 function calculerMoyenne(depenses) {
-  // Votre code ici.
+  const total = calculerTotal(depenses); 
+  return depenses.length === 0 ? 0 : total / depenses.length; 
 }
 
 // TODO 3 : retourner les montants strictement supérieurs à 2000 FCFA.
