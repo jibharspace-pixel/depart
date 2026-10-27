@@ -37,7 +37,11 @@ function filtrerGrossesDepenses(depenses) {
 
 // TODO 4 : retourner la plus grande dépense ; 0 si le tableau est vide.
 function trouverMaximum(depenses) {
-  // Votre code ici.
+    verifierDepenses(depenses);
+  if (depenses.length === 0) {
+    return 0; 
+  }
+  return Math.max(...depenses);
 }
 
 // TODO 5 : créer une copie triée, puis afficher le rapport demandé.
