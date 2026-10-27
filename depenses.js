@@ -31,7 +31,8 @@ function calculerMoyenne(depenses) {
 
 // TODO 3 : retourner les montants strictement supérieurs à 2000 FCFA.
 function filtrerGrossesDepenses(depenses) {
-  // Votre code ici.
+   verifierDepenses(depenses);
+  return depenses.filter((montant) => montant > 2000); 
 }
 
 // TODO 4 : retourner la plus grande dépense ; 0 si le tableau est vide.
