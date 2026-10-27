@@ -1,4 +1,5 @@
 // J06 — Bilan des dépenses
+
 // Type : number[] ; unité de chaque élément : FCFA.
 const depensesSemaine = [1500, 2500, 0, 4000, 1000, 2500, 3000];
 
@@ -45,4 +46,27 @@ function trouverMaximum(depenses) {
 }
 
 // TODO 5 : créer une copie triée, puis afficher le rapport demandé.
-console.log("TODO : complétez l’analyse des dépenses.");
+try {
+  verifierDepenses(depensesSemaine); 
+
+  console.log(`Tableau initial avant le tri : [${depensesSemaine.join(", ")}]`);
+
+  const depensesTriees = [...depensesSemaine].sort((a, b) => a - b); // number[] ; FCFA 
+
+  console.log(`Tableau initial (après tri) : [${depensesSemaine.join(", ")}]`);
+
+  const total = calculerTotal(depensesSemaine); // number ; FCFA
+  const moyenne = calculerMoyenne(depensesSemaine); // number ; FCFA par jour
+  const grossesDepenses = filtrerGrossesDepenses(depensesSemaine); // number[] ; montant au dessus de 2000 FCFA
+  const maximum = trouverMaximum(depensesSemaine); // number ; FCFA
+
+ 
+  console.log("\n=== Bilan des dépenses de la semaine ===");
+  console.log(`Total : ${total.toFixed(2)} FCFA`);
+  console.log(`Moyenne par jour : ${moyenne.toFixed(2)} FCFA`);
+  console.log(`Dépenses au-dessus de 2000 FCFA : [${grossesDepenses.join(", ")}]`);
+  console.log(`Maximum : ${maximum.toFixed(2)} FCFA`);
+  console.log(`Copie triée (croissant) : [${depensesTriees.join(", ")}]`);
+} catch (erreur) {
+  console.error(`Erreur : ${erreur.message}`);
+}
